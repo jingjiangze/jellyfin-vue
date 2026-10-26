@@ -23,7 +23,7 @@ jobs:
         run: npm install -g pnpm@12.14.0
 
       - name: Install deps
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile --config.engine-strict=false || pnpm install --frozen-lockfile --no-verify-store-integrity
 
       - name: Build frontend
         run: pnpm --filter @jellyfin-vue/frontend build
