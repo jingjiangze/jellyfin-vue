@@ -20,7 +20,7 @@ jobs:
           node-version: 24.11.0
 
       - name: Install pnpm
-        run: corepack enable && corepack prepare pnpm@12.14.0 --activate
+        run: npm install -g pnpm@12.14.0
 
       - name: Install deps
         run: pnpm install --frozen-lockfile
